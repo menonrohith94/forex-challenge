@@ -167,10 +167,12 @@ input {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 90%;
+  margin: auto;
 }
 
 .data-container{
-  width: 90%;
+  width: 100%;
 }
 
 strong {

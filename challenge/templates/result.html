@@ -25,34 +25,39 @@
         </table>
     </div>
 
-    <footer>
-        <ul class="pagination justify-content-center">
-           <span class="step-links">
+    <div class="col-sm-12 row">
+        <div class=" col-sm-12 row pagination justify-content-center">
+           <span class="step-links col-sm-12 row">
                 {% if page_obj.has_previous %}
-                <li class="page-item">
-                    <a class="page-link" href="?page=1">&laquo; first</a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">previous</a>
-                </li>
-
+                <div class="col-sm-4 row" >
+                    <div class="page-item col-sm-6">
+                        <a class="page-link" href="?page=1">&laquo; first</a>
+                    </div>
+                    <div class="page-item col-sm-6">
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}">previous</a>
+                    </div>
+                </div>
+                
                 {% endif %}
 
-                <span class="current page-link">
+                <div class="current page-link col-sm-4">
                     Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
-                </span>
+                </div>
 
                 {% if page_obj.has_next %}
-                    <li class="page-item">
+                <div class="col-sm-4 row">
+                    <div class="page-item col-sm-6">
                         <a class="page-link" href="?page={{ page_obj.next_page_number }}">next</a>
-                    </li>
-                    <li>
+                    </div>
+                    <div class="col-sm-6">
                         <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
-                    </li>
+                    </div>
+                </div>
+                    
 
                 {% endif %}
            </span>
-        </ul>
-    </footer>
+        </div>
+    </div>
 </div>
 {% endblock %}
