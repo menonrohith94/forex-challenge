@@ -1,0 +1,14 @@
+[
+    {
+        "TrxId": 1,
+        "CurrencyFrom": "GBP",
+        "CurrencyTo": "USD",
+        "AmountFrom": 1928
+    },
+    {
+        "TrxId": 2,
+        "CurrencyFrom": "USD",
+        "CurrencyTo": "EUR",
+        "AmountFrom": 15000
+    }
+]

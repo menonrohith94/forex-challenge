@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <element>
+      <AmountFrom>1928</AmountFrom>
+      <CurrencyFrom>GBP</CurrencyFrom>
+      <CurrencyTo>USD</CurrencyTo>
+      <TrxId>1</TrxId>
+   </element>
+   <element>
+      <AmountFrom>15000</AmountFrom>
+      <CurrencyFrom>USD</CurrencyFrom>
+      <CurrencyTo>EUR</CurrencyTo>
+      <TrxId>2</TrxId>
+   </element>
+</root>

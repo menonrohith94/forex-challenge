@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="result">
+    <div class="data-container">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+                <th scope="col">Source Currency</th>
+                <th scope="col">Destination Currency</th>
+                <th scope="col">Source Amount</th>
+                <th scope="col">Destination Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for forex in page_obj %}
+            <tr>
+              <td>{{forex.SourceCurrency}}</td>
+              <td>{{forex.DestinationCurrency}}</td>
+              <td>{{forex.SourceAmount}}</td>
+              <td>{{forex.DestinationAmount}}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <ul class="pagination justify-content-center">
+           <span class="step-links">
+                {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page=1">&laquo; first</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">previous</a>
+                </li>
+
+                {% endif %}
+
+                <span class="current page-link">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>
+
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}">next</a>
+                    </li>
+                    <li>
+                        <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                    </li>
+
+                {% endif %}
+           </span>
+        </ul>
+    </footer>
+</div>
+{% endblock %}
